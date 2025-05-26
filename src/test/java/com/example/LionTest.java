@@ -7,7 +7,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 class LionTest {
@@ -24,13 +24,13 @@ class LionTest {
     @Test
     void shouldReturnTrueForMaleHasMane() throws Exception {
         Lion lion = new Lion("Самец", feline);
-        assertEquals(true, lion.doesHaveMane(), "Самец льва должен иметь гриву.");
+        assertTrue(lion.doesHaveMane(), "Самец льва должен иметь гриву.");
     }
 
     @Test
     void shouldReturnFalseForFemaleDoesNotHaveMane() throws Exception {
         Lion lion = new Lion("Самка", feline);
-        assertEquals(false, lion.doesHaveMane(), "Самка льва не должна иметь гриву.");
+        assertFalse(lion.doesHaveMane(), "Самка льва не должна иметь гриву.");
     }
 
     @Test
